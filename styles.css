@@ -1,0 +1,318 @@
+/* Variables */
+
+:root {
+	--title-font-size: 100px;
+	--message-font-size: 22px;
+	--rules-font-size: 20px;
+	--font-size: 30px;
+	--pit-size: 120px;
+	--settings-button-size: 77px;
+	--button-height: 80px;
+	--button-width: 420px;
+	--storage-hight: calc(var(--pit-size)*2);
+	--message-height: 50px;
+	--message-width: calc(var(--pit-size)*6.3);
+	--username-display-height: 90px;
+	--username-displat-width: 420px;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+	font-family: "Monaco", monospace;
+}
+
+.titleCard {
+	text-align:center;
+	font-size: 100px;
+	margin-bottom: 10px;
+	color: hotpink;
+	background-color: black;
+    user-select:none;
+}
+
+.board{
+	display:grid;
+	justify-content: center;
+	grid-template-columns: repeat(8,auto);
+	border: 1px black;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	font-weight: bold;
+}
+
+
+.pit1{
+	width:var(--pit-size);
+	height:var(--pit-size);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 25%;
+	margin: 4px;
+	cursor: pointer;
+    user-select:none;
+}
+
+.pit1:hover::before{
+	content: "";
+	display: block;
+	width: calc(var(--pit-size) * .8);
+	height: calc(var(--pit-size) * .8);
+	position: absolute;
+	background-color: rgba(8,8,8,0.15);
+	border-radius: 25%;
+}
+
+.pit2{
+	width:var(--pit-size);
+	height:var(--pit-size);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 25px;
+	border-radius: 25%;
+	margin: 4px;
+	cursor: not-allowed;
+    user-select:none;
+}
+
+
+.storage-1{
+	width:var(--pit-size);
+	height:var(--storage-height);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom-left-radius: 25%;
+	border-bottom-right-radius: 25%;
+    user-select:none;
+}
+
+.storage-2{
+	width:var(--pit-size);
+	height:var(--storage-height);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-top-left-radius: 25%;
+	border-top-right-radius: 25%;
+    user-select:none;
+}
+
+.fill-storage-1{
+	width:var(--pit-size);
+	height:var(--storage-height);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-top-left-radius: 25%;
+	border-top-right-radius: 25%;
+}
+
+.fill-storage-2{
+	width:var(--pit-size);
+	height:var(--storage-height);
+	background-color: hotpink;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	border-bottom-left-radius: 25%;
+	border-bottom-right-radius: 25%;
+}
+
+.message{
+	width:var(--message-width);
+	height:calc(var(--message-height));
+	background-color: hotpink;
+	font-size: var(--message-font-size);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+    user-select:none;
+	border-radius: 1rem;
+}
+
+.mainMenuAuth{
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	background-color: black;
+	opacity: .95;
+	font-size: var(--title-font-size);
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	flex-direction: column;
+	user-select:none;
+}
+
+
+.menuButton{
+	width:var(--button-width);
+ 	height:var(--button-height);
+ 	background-color: hotpink;
+	font-size: var(--font-size);
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	margin-top: 8px;
+	margin-left: auto;
+	margin-right: auto;
+ 	cursor: pointer;
+ 	user-select:none;
+ 	border-radius: 1rem;
+}
+
+.gameGoBackButton{
+	display: none;
+	width: var(--message-width);
+ 	height:var(--button-height);
+ 	background-color: hotpink;
+	font-size: var(--font-size);
+ 	justify-content: center;
+ 	align-items: center;
+ 	margin-top: 8px;
+	margin-left: auto;
+	margin-right: auto;
+ 	cursor: pointer;
+	margin-top: 20px;
+ 	user-select:none;
+	border-radius: 1rem;
+}
+
+.quitButton{
+ 	display: flex;
+	width: var(--message-width);
+ 	height: var(--button-height);
+ 	background-color: hotpink;
+	font-size: var(--font-size);
+ 	justify-content: center;
+ 	align-items: center;
+ 	align-text: center;
+ 	margin-top: 8px;
+	margin-left: auto;
+	margin-right: auto;
+ 	cursor: pointer;
+	margin-top: 20px;
+ 	user-select:none;
+	border-radius: 1rem;
+}
+
+.errorDisplay{
+	width:var(--username-displat-width);
+	height:calc(var(--username-display-height)/1.5);
+	background-color: hotpink;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: var(--font-size);
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+    user-select:none;
+    border-radius: 1rem;	
+}
+
+.rules{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	background-color: black;
+	opacity: .95;
+	font-size: var(--title-font-size);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	user-select:none;
+}
+
+.textDisplay{
+	margin-left: 8em;
+	text-align: left;
+	font-size: var(--rules-font-size);
+}
+
+.settings{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: white;
+	background-color: black;
+	opacity: .95;
+	font-size: var(--title-font-size);
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	user-select:none;
+}
+
+
+.settingsTitle{
+	width:var(--button-width);
+ 	height:var(--button-height);
+ 	background-color: hotpink;
+	font-size: var(--font-size);
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	margin-top: 10px;
+	margin-bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+ 	user-select:none;
+ 	border-radius: 1rem;
+}
+
+.settingsAIButton{
+	width:var(--settings-button-size);
+	height:var(--settings-button-size);
+	background-color: hotpink;
+	border-radius: 25%;
+	margin-left: 4px;
+	margin-right: 4px;
+	cursor: pointer;
+    user-select:none;
+}
+
+.settingsPitButton{
+	width:var(--settings-button-size);
+	height:var(--settings-button-size);
+	background-color: hotpink;
+	border-radius: 25%;
+	margin-left: 4px;
+	margin-right: 4px;
+	cursor: pointer;
+    user-select:none;
+}

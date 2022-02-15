@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewpoint" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
+	<title>Mancala</title>
+</head>
+
+<body>
+
+
+	<!-- Display Main Menu (authenticated) -->
+	<div class="mainMenuAuth" id="mainMenuAuth">
+		<div>Mancala</div>
+		<button class="menuButton" id="playerVsComputerButton">Player vs Computer</button>
+		<button class="menuButton" id="computerVsPlayerButton">Computer vs Player</button>
+		<button class="menuButton" id="rulesButton">Rules</button>
+		<button class="menuButton" id="settingsButton">Settings</button>
+	</div> 
+
+
+	<!-- Display Rules -->
+	<div class="rules" id="rules">
+		<div>Mancala - Rules</div>
+		<div class="textDisplay" id="displayRules">
+			<p>The players take turns doing the following:</p>
+			<ul> 
+				<li>Picking up all of the pieces in any one of the holes on their side.</li>
+				<li>Moving counter-clockwise, the player deposits one of the stones in each hole until the stones run out.</li>
+			</ul>
+				<p>As the player moves the stones: </p>
+			<ul>
+				<li>1. If you run into your own store, deposit one piece in it.</li>
+				<li>2. If you run into your opponent's store, skip it.</li>
+				<li>3. If the last piece you drop is in your own store, you get a free turn.</li>
+				<li>4. If the last piece you drop is in an empty hole on your side, you capture that piece and any pieces in the hole directly opposite.</li>
+				<li>5. Always place all captured pieces in your store.</li>
+			</ul>
+				<p>The game ends when:</p>
+			<ul>
+				<li>All six spaces on one side of the Mancala board are empty.</li>
+				<li>The player who still has pieces on his side of the board when the game ends captures all of those pieces.</li>
+				<li>Count all the pieces in each store. The winner is the player with the most pieces.</li>
+			</ul>
+		</div>
+		<button class="menuButton" id="rulesGoBack"> Back</button>
+		
+	</div>
+
+	<!-- Settings Menu -->
+	<div class="settings" id="settings">
+		<div>Settings</div>
+		<div class="AIsettings"><!--
+		 --><button class="settingsAIButton" id="settingsAIButton1" AIsettings>1</button><!--		
+		 --><button class="settingsAIButton" id="settingsAIButton2" AIsettings>2</button><!--		
+		 --><button class="settingsAIButton" id="settingsAIButton3" AIsettings>3</button><!--				
+		 --><button class="settingsAIButton" id="settingsAIButton4" AIsettings>4</button><!--				
+		 --><button class="settingsAIButton" id="settingsAIButton5" AIsettings>5</button><!-- -->				
+		</div>		
+		<div class="settingsTitle" id="settingsAI">AI Level: 3</div>
+		<div class="pitSettings"><!--
+		 --><button class="settingsPitButton" id="settingsPitButton1" pitSettings>3</button><!--		
+		 --><button class="settingsPitButton" id="settingsPitButton2" pitSettings>4</button><!--		
+		 --><button class="settingsPitButton" id="settingsPitButton3" pitSettings>5</button><!--				
+		 --><button class="settingsPitButton" id="settingsPitButton4" pitSettings>6</button><!--				
+		 --><button class="settingsPitButton" id="settingsPitButton5" pitSettings>7</button><!-- -->				
+		</div>		
+		<div class="settingsTitle" id="settingsPit">Pieces per Pit: 4</div>	
+		<button class="menuButton" id="settingsGoBack"> Back</button>		
+		
+
+	</div>	
+	
+
+
+	<!-- Game Title -->
+	<div class="titleCard" id="titleCard">
+		Mancala
+	</div>
+
+
+	<!-- Main Board and Player Storage -->	
+
+	<div class="board" id="board">
+		<div class="storage-2" id="13" PlayerTwoStorage>0</div>
+		<div class="pit2" id="12" PlayerTwoPit>4</div>
+		<div class="pit2" id="11" PlayerTwoPit>4</div>
+		<div class="pit2" id="10" PlayerTwoPit>4</div>
+		<div class="pit2" id="9" PlayerTwoPit>4</div>
+		<div class="pit2" id="8" PlayerTwoPit>4</div>
+		<div class="pit2" id="7" PlayerTwoPit>4</div>
+		<div class="fill-storage-1"></div>
+
+		<div class="fill-storage-2"></div>
+		<div class="pit1" id="0" PlayerOnePit>4</div>
+		<div class="pit1" id="1" PlayerOnePit>4</div>
+		<div class="pit1" id="2" PlayerOnePit>4</div>
+		<div class="pit1" id="3" PlayerOnePit>4</div>
+		<div class="pit1" id="4" PlayerOnePit>4</div>
+		<div class="pit1" id="5" PlayerOnePit>4</div>
+		<div class="storage-1" id="6" PlayerOneStorage>0</div>
+	</div>
+	
+	<p></p>
+
+	<!-- Game Messages  -->
+	<div class="message" id="message"> 
+		Your turn to play!
+	</div>
+
+	
+	<!-- Quit and Play Again Buttons -->
+	<div>
+		<button class="gameGoBackButton" id="gameGoBackButton">Back to Main Menu</button>
+		<button class="quitButton" id="quitButton">Quit</button>
+	</div>
+
+</body>
+
+</html>
